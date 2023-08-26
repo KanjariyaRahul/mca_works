@@ -1,156 +1,110 @@
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
- <head>
- <meta charset="utf-8">
-<title>Neumorphic Cards</title>
-<style>
-    
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+<html lang="en">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services Section with HTML and CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            background-image: linear-gradient(to right, #8B8ABB, #8AC59D);
+        }
+        
+        img {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .container {
+            display: grid;
+        }
+        
+        .container__box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 15px;
+        }
+        
+        .container .container__box .box {
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 5px 5px 6px #333;
+            text-align: center;
+            padding: 20px 30px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            transition: .2s, linear;
+        }
+        
+        .container__heading {
+            text-align: center;
+            padding-bottom: 15px;
+            color: #e3e3e3;
+            text-shadow: 0 0 10px black;
+            font-size: 50px;
+            font-weight: 600;
+        }
+        
+        .container .container__box .box h3 {
+            color: #444;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .container .container__box .box p {
+            font-size: 14px;
+            font-weight: 100;
+            color: #555;
+        }
+        
+        .container .container__box .box a {
+            border-radius: 4px;
+            background: #444;
+            color: white;
+        }
+        
+        .container .container__box .box a:hover {
+            background: #908080;
+        }
+    </style>
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #ebf5fc;
-}
+    <body>
+        <div class="container">
+            <h1 class="container__heading">Subject</h1>
+            <div class="container__box">
+                <!-- HTML5 -->
+                <div class="box">
+                    <img src="./image/letter-c.png" alt="">
+                    <h3>Programming Using C</h3>
+                    <p>C programming language is a procedural and general-purpose language that provides low-level access to system memory.</p>
+                    <a href="https://github.com/KanjariyaRahul/mca_works/tree/main/Programming_c" class="btn">Read More</a>
+                </div>
+                <!-- CSS3 -->
+                <div class="box">
+                    <img src="./image/php-code.png" alt="">
+                    <h3>Web Development Using PHP</h3>
+                    <p>PHP is an HTML-embedded, server-side scripting language designed for web development. It is also used as a general purpose programming language.</p>
+                    <a href="" class="btn">Read More</a>
+                </div>
+                <!-- JavaScript -->
+                <div class="box">
+                    <img src="./image/sql-injection.png" alt="">
+                    <h3>Database for Enterprise Applications</h3>
+                    <p>SQL is a programming language used by nearly all relational databases to query, manipulate, and define data, and to provide access control.</p>
+                    <a href="" class="btn">Read More</a>
+                </div>
 
-.container {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 1100px;
-}
+            </div>
+        </div>
+    </body>
 
-.container .card {
-    width: 320px;
-    margin: 20px;
-    padding: 40px 30px;
-    background: #ebf5fc;
-    border-radius: 40px;
-    box-shadow: -6px -6px 20px rgba(255,255,255,1),6px 6px 20px rgba(0,0,0,0.1);
-}
-
-.container .card:hover {
-    box-shadow: inset -6px -6px 20px rgba(255,255,255,0.5),inset 6px 6px 20px rgba(0,0,0,0.05);
-}
-
-.container .card .imgBx {
-    position: relative;
-    text-align: center;
-}
-
-.container .card .imgBx img {
-    max-width: 120px;
-}
-
-.container .card .contentBx {
-    position: relative;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.container .card .contentBx h2 {
-    color: #0575E6;
-    font-weight: 700;
-    font-size: 1.4em;
-    letter-spacing: 2px;
-}
-
-.container .card .contentBx p {
-    color: #3a9bdc;
-}
-
-.container .card .contentBx a {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 15px;
-    border-radius: 40px;
-    color: #3a9bdc;
-    font-size: 16px;
-    text-decoration: none;
-    box-shadow: -4px -4px 15px rgba(255,255,255,1),4px 4px 15px rgba(0,0,0,0.1);
-}
-
-.container .card .contentBx a:hover {
-    box-shadow: inset -4px -4px 10px rgba(255,255,255,0.5),inset 4px 4px 10px rgba(0,0,0,0.1);
-}
-
-.container .card a:hover span {
-    display: block;
-    transform: scale(0.98);
-}
-
-.container .card:hover .imgBx,.container .card:hover .contentBx {
-    transform: scale(0.98);
-}
-
-.credit a {
-    text-decoration: none;
-    color: #00acee;
-    font-weight: 800;
-}
-
-.credit {
-    text-align: center;
-    font-family: Verdana,Geneva,Tahoma,sans-serif;
-}
-
-
-</style>
-</head>
-<body>
-<div class="body">
-    <h1><center>👋 Hi, I'm Rahul Kanjariya</center></h1>
-	<div class="container">
-		<div class="card">
-			<div class="imgBx">
-				<img src="https://cdn.pixabay.com/photo/2021/03/27/06/31/code-6127616__340.png" alt="">
-			</div>
-			<div class="contentBx">
-				<h3>Programming Using C</h3>
-				<p>C programming language is a procedural and general-purpose language that provides low-level access to system memory.</p>
-				<a href="https://github.com/Rahul9265/Rahul_works/tree/main/Programming_c">
-					<span>Read More</span>
-
-				</a>
-			</div>
-		</div>
-		<div class="card">
-			<div class="imgBx">
-				<img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747__340.png" alt="">
-			</div>
-			<div class="contentBx">
-				<h3>Web Development Using PHP</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam laboriosam omnis dolore amet sequi nobis provident nisi esse optio recusandae quod.</p>
-				<a href="">
-					<span>Read More</span>
-				</a>
-			</div>
-		</div>
-		<div class="card">
-			<div class="imgBx">
-				<img src="https://cdn.pixabay.com/photo/2017/03/30/17/41/javascript-2189147__340.png" alt="">
-			</div>
-			<div class="contentBx">
-				<h3>Database for Enterprise Applications</h3>
-				<p></p>
-				<a href="">
-					<span>Read More</span>
-				</a>
-			</div>
-		</div>
-	</div>
-</div>
- </body>
 </html>
