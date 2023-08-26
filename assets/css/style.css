@@ -156,7 +156,7 @@ input, textarea {
 html { font-family: var(--ff-poppins); }
 
 body { 
-  background:  linear-gradient(#8fe0f596 ,rgb(238, 238, 238));
+ background: var(--smoky-black);
  }
 
 
